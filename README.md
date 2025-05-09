@@ -64,6 +64,7 @@ In this example, the `sound()` method is polymorphic; the `Dog` class overrides 
 ---
 
 Q. What is inheritance? Explain briefly.
+
 A. Inheritance is a mechanism in object-oriented programming where a new class acquires the properties and behaviors (methods) of an existing class. The class that inherits is called the subclass, and the class from which it inherits is the superclass.
 
 Example:
@@ -87,6 +88,7 @@ In this case, `Dog` inherits the `eat()` method from `Animal`.
 ---
 
 Q. What is encapsulation and why is it important?
+
 A. Encapsulation is the process of hiding the implementation details of a class and exposing only the necessary parts to the outside world. This is achieved by declaring class variables as `private` and providing public getter and setter methods. Encapsulation helps in data security and makes the code more maintainable.
 
 Example:
