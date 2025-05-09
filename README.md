@@ -495,7 +495,6 @@ In this example, UserRepository is injected into UserService using constructor i
 ---
 
 Q. What is the role of @SpringBootApplication?
-
 A. `@SpringBootApplication` is a convenience annotation that combines three important annotations:
 
 * `@Configuration`: Indicates that the class has `@Bean` definition methods.
@@ -507,7 +506,6 @@ It’s used to mark the main class of a Spring Boot application to bootstrap and
 ---
 
 Q. Spring Bean Scopes.
-
 A. In Spring, beans can have different scopes that define the lifecycle of the bean:
 
 * **Singleton**: Default scope. A single instance of the bean is created and shared across the application context.
@@ -529,7 +527,6 @@ public MyBean myBean() {
 ---
 
 Q. @Qualifier and @Primary.
-
 A. `@Qualifier` and `@Primary` are used to resolve ambiguity when multiple beans of the same type exist.
 
 * **@Primary**: Marks one bean as the default to be injected when multiple beans of the same type exist.
@@ -562,7 +559,6 @@ private UserService userService;
 ---
 
 Q. Difference between @Controller and @RestController.
-
 A. Both `@Controller` and `@RestController` are used to define controller classes in Spring MVC, but they serve different purposes:
 
 * **@Controller**: Used for traditional MVC controllers that return a view (HTML, JSP, etc.). You need to explicitly specify the response body with `@ResponseBody`.
@@ -594,13 +590,11 @@ public class UserRestController {
 ### Spring Boot Auto-Configuration
 
 Q. Explain the role of @EnableAutoConfiguration annotation in a Spring Boot application.
-
 A. `@EnableAutoConfiguration` is a Spring Boot annotation that enables automatic configuration of Spring application components based on the dependencies present in the classpath. It automatically configures beans like data sources, JPA, web components, etc., without the need for manual configuration.
 
 ---
 
 Q. How does Spring Boot achieve auto-configuration internally?
-
 A. Spring Boot achieves auto-configuration by scanning the classpath for relevant libraries and applying default configuration settings for beans based on those libraries. The `@EnableAutoConfiguration` annotation triggers the process, and Spring Boot looks for `@Configuration` classes annotated with `@ConditionalOnClass`, `@ConditionalOnMissingBean`, etc., which determine whether specific auto-configuration should be applied.
 
 Example:
@@ -619,7 +613,6 @@ public class DataSourceAutoConfiguration {
 ---
 
 Q. How can you override auto-configuration in Spring Boot?
-
 A. You can override auto-configuration in Spring Boot by:
 
 * Providing your own custom configuration to replace the default configuration.
