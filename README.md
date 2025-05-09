@@ -19,22 +19,26 @@
 
 ### Platform & Language Fundamentals
 
-Q. How does Java achieve platform independence?  
+**Q. How does Java achieve platform independence?  
+**
 A. Java achieves platform independence through the use of the Java Virtual Machine (JVM). When you write Java code, it gets compiled into bytecode, which is platform-independent. The JVM on any platform (Windows, Linux, etc.) can interpret this bytecode and run the program, allowing it to work on any platform that has a JVM installed.
 
 ---
 
-Q. Is Java 100% object-oriented?  
+**Q. Is Java 100% object-oriented?  
+**
 A. No, Java is not 100% object-oriented. Although Java is primarily object-oriented, it still has primitive types like `int`, `char`, `double`, etc., which are not objects. However, Java provides wrapper classes (e.g., `Integer`, `Character`) for these primitive types to make them objects when necessary.
 
 ---
 
-Q. Can a class extend itself?  
+**Q. Can a class extend itself?  
+**
 A. No, a class cannot extend itself in Java. The class hierarchy must always be linear, meaning a class can extend another class but cannot extend itself.
 
 ---
 
-Q. What is polymorphism? Explain with an example.  
+**Q. What is polymorphism? Explain with an example.  
+**
 A. Polymorphism in Java refers to the ability of one object to take on many forms. It allows one interface to be used for a general class of actions. The specific action is determined by the exact nature of the situation.
 
 Example:
@@ -63,8 +67,8 @@ In this example, the `sound()` method is polymorphic; the `Dog` class overrides 
 
 ---
 
-Q. What is inheritance? Explain briefly.
-
+**Q. What is inheritance? Explain briefly.
+**
 A. Inheritance is a mechanism in object-oriented programming where a new class acquires the properties and behaviors (methods) of an existing class. The class that inherits is called the subclass, and the class from which it inherits is the superclass.
 
 Example:
@@ -87,8 +91,8 @@ In this case, `Dog` inherits the `eat()` method from `Animal`.
 
 ---
 
-Q. What is encapsulation and why is it important?
-
+**Q. What is encapsulation and why is it important?
+**
 A. Encapsulation is the process of hiding the implementation details of a class and exposing only the necessary parts to the outside world. This is achieved by declaring class variables as `private` and providing public getter and setter methods. Encapsulation helps in data security and makes the code more maintainable.
 
 Example:
@@ -113,17 +117,20 @@ Here, `name` is encapsulated inside the `Person` class, and the outside world in
 
 ### Data Structures and Algorithms
 
-Q. What is the difference between a stack and a queue?
+**Q. What is the difference between a stack and a queue?
+**
 A. A **stack** is a data structure that follows the Last In, First Out (LIFO) principle, meaning the last element added is the first one to be removed. A **queue**, on the other hand, follows the First In, First Out (FIFO) principle, meaning the first element added is the first one to be removed.
 
 ---
 
-Q. What is the difference between a process and a thread?
+**Q. What is the difference between a process and a thread?
+**
 A. A **process** is an independent unit of execution with its own memory space, while a **thread** is a lightweight unit of execution within a process. Multiple threads can exist within a single process and share the same memory space.
 
 ---
 
-Q. Explain binary search.
+**Q. Explain binary search.
+**
 A. Binary search is an efficient algorithm for finding an element in a sorted array. It works by repeatedly dividing the search interval in half. If the value of the search key is less than the item in the middle of the interval, the search continues in the lower half, otherwise, it continues in the upper half.
 
 Example:
@@ -143,7 +150,8 @@ int binarySearch(int arr[], int key) {
 
 ---
 
-Q. What is the time complexity of common operations in a HashMap?
+**Q. What is the time complexity of common operations in a HashMap?
+**
 A. The time complexity for the common operations in a HashMap are:
 
 * **get()**: O(1) on average, but O(n) in the worst case (when there are hash collisions).
@@ -152,22 +160,26 @@ A. The time complexity for the common operations in a HashMap are:
 
 ---
 
-Q. What is the difference between a HashSet and a TreeSet?
+**Q. What is the difference between a HashSet and a TreeSet?
+**
 A. A **HashSet** is an implementation of the Set interface backed by a hash table. It does not maintain any order of elements. A **TreeSet** is an implementation of the Set interface that uses a red-black tree and maintains elements in a sorted order.
 
 ---
 
-Q. When is a linked list more efficient than an array? Provide an example.
+**Q. When is a linked list more efficient than an array? Provide an example.
+**
 A. A linked list is more efficient than an array when you need frequent insertions and deletions in the middle of the collection. This is because a linked list allows adding/removing elements in constant time O(1), whereas in an array, shifting elements would take linear time O(n).
 
 ---
 
-Q. What is a graph data structure?
+**Q. What is a graph data structure?
+**
 A. A graph is a collection of nodes (also called vertices) and edges that connect pairs of nodes. It can be directed or undirected, and is used to represent networks, such as social networks, road maps, or web links.
 
 ---
 
-Q. How would you reverse a linked list?
+**Q. How would you reverse a linked list?
+**
 A. To reverse a linked list, you can iterate through the list and change the direction of the links between nodes. Here is an example:
 
 ```java
@@ -194,41 +206,48 @@ Node reverse(Node head) {
 
 ---
 
-Q. How do hashCode and equals work in Java collections?
+**Q. How do hashCode and equals work in Java collections?
+**
 A. In Java collections, `hashCode()` and `equals()` are used to determine the equality of objects. The `hashCode()` method returns an integer that represents the hash code of an object, and `equals()` is used to compare objects for equality. The general rule is that if two objects are considered equal according to `equals()`, they must have the same hash code.
 
 ---
 
 ### Memory Management
 
-Q. How does garbage collection work in Java?
+**Q. How does garbage collection work in Java?
+**
 A. Garbage collection in Java is the process of automatically reclaiming memory that is no longer in use by the program. It is handled by the JVM, and it automatically identifies and removes objects that are no longer referenced, freeing up memory for future use.
 
 ---
 
-Q. What are the differences between the Young Generation and Old Generation memory spaces in Java?
+**Q. What are the differences between the Young Generation and Old Generation memory spaces in Java?
+**
 A. The **Young Generation** in Java is where new objects are created. It is further divided into the **Eden space** and **Survivor spaces**. The **Old Generation** contains objects that have survived multiple garbage collection cycles. Objects are moved from the Young Generation to the Old Generation when they become older.
 
 ---
 
-Q. Can you manually trigger garbage collection?
+**Q. Can you manually trigger garbage collection?
+**
 A. While you can call `System.gc()` to suggest that the JVM runs garbage collection, it is not guaranteed that garbage collection will actually occur. The JVM decides when to run garbage collection based on its own algorithms and memory usage.
 
 ---
 
-Q. How can memory leaks occur in Java despite automatic garbage collection?
+**Q. How can memory leaks occur in Java despite automatic garbage collection?
+**
 A. Memory leaks in Java can occur when objects are no longer needed but are still being referenced by the program. Since the garbage collector only frees memory for objects that are no longer reachable, objects that are still referenced will not be collected, leading to a memory leak.
 
 ---
 
-Q. Difference between stack and heap memory.
+**Q. Difference between stack and heap memory.
+**
 A. **Stack memory** is used for method execution and local variables, and it follows the Last In, First Out (LIFO) principle. It is automatically managed. **Heap memory**, on the other hand, is used for objects that are dynamically allocated at runtime. It is managed by the garbage collector.
 
 ---
 
 ### Threading and Concurrency
 
-Q. Creating Threads (Runnable vs Callable).
+**Q. Creating Threads (Runnable vs Callable).
+**
 A. **Runnable** is used when you don’t need to return any result from a thread. The `run()` method contains the code to be executed. **Callable** is similar to `Runnable` but allows returning a result (via `Future`), and can throw exceptions.
 
 Example:
@@ -249,76 +268,90 @@ class MyCallable implements Callable<Integer> {
 
 ---
 
-Q. wait vs notify.
+**Q. wait vs notify.
+**
 A. `wait()` is used to make a thread wait until it is notified by another thread. `notify()` is used to wake up a thread that is waiting.
 
 ---
 
-Q. How do you handle deadlocks in Java?
+**Q. How do you handle deadlocks in Java?
+**
 A. Deadlocks can be avoided by ensuring that threads acquire locks in the same order and releasing locks as soon as possible. Using timeout mechanisms or trying to acquire locks only when necessary can also help avoid deadlocks.
 
 ---
 
-Q. What are the volatile variables and how do they work within the Java memory model?
+**Q. What are the volatile variables and how do they work within the Java memory model?
+**
 A. A **volatile** variable in Java is one that is directly read from and written to the main memory, ensuring that changes made by one thread are immediately visible to other threads. It prevents the JVM from caching the variable value.
 
 ---
 
-Q. Can you explain the difference between synchronized collections and concurrent collections?
+**Q. Can you explain the difference between synchronized collections and concurrent collections?
+**
 A. **Synchronized collections** are traditional collections that are wrapped with synchronized blocks to ensure thread safety. **Concurrent collections** (e.g., `ConcurrentHashMap`) are designed for high concurrency and provide built-in thread safety without needing explicit synchronization.
 
 ---
 
-Q. How does the Java memory model ensure thread safety?
+**Q. How does the Java memory model ensure thread safety?
+**
 A. The Java memory model ensures thread safety by providing mechanisms such as synchronized blocks, locks, volatile variables, and atomic variables to control access to shared resources and prevent race conditions.
 
 ---
 
-Q. Thread safety (HashMap, Collections).
+**Q. Thread safety (HashMap, Collections).
+**
 A. **HashMap** is not thread-safe; it can be wrapped in `Collections.synchronizedMap()` to make it thread-safe. However, it still has limitations. **ConcurrentHashMap** is thread-safe without needing to synchronize entire sections, offering better performance in multi-threaded environments.
 
 ---
 
 ### Reflection and Serialization
 
-Q. What is reflection in Java and when would you use it?
+**Q. What is reflection in Java and when would you use it?
+**
 A. **Reflection** in Java is the ability to inspect or modify the runtime behavior of a class or object. It is useful for applications like dependency injection, serialization, or testing frameworks that require dynamic inspection of objects at runtime.
 
 ---
 
-Q. Is there any disadvantage of using reflection?
+**Q. Is there any disadvantage of using reflection?
+**
 A. The main disadvantages of reflection are performance overhead, as it involves extra processing, and security concerns, as it can bypass normal access control checks.
 
 ---
 
-Q. Do you know about serialized data?
+**Q. Do you know about serialized data?
+**
 A. **Serialization** is the process of converting an object into a byte stream so that it can be easily stored or transmitted. **Deserialization** is the reverse process, where a byte stream is converted back into an object.
 
 ---
 
-Q. Why shouldn't we serialize data into a text file?
+**Q. Why shouldn't we serialize data into a text file?
+**
 A. Storing serialized data in a text file is inefficient, as it involves a lot of unnecessary formatting. Binary serialization is typically more compact and efficient for storing complex objects.
 
 ---
 
-Q. What happens if your Serializable class contains a member that is not serializable and how will you fix it?
+**Q. What happens if your Serializable class contains a member that is not serializable and how will you fix it?
+**
 A. If a class contains a non-serializable member, it will throw a `java.io.NotSerializableException` during serialization. To fix it, you can mark the non-serializable field with the `transient` keyword to exclude it from the serialization process.
 
 ---
 
 ### Exception Handling
 
-Q. What is the difference between checked and unchecked exceptions?
+**Q. What is the difference between checked and unchecked exceptions?
+**
 A. **Checked exceptions** are exceptions that are checked at compile-time, such as `IOException`. They must be either caught or declared in the method signature. **Unchecked exceptions** (RuntimeExceptions) are not checked at compile-time and typically represent programming errors, such as `NullPointerException`.
 
 ---
 
-Q. Handling exceptions in projects.
+**Q. Handling exceptions in projects.
+**
 A. In projects, exceptions should be handled by using try-catch blocks. It is important to catch specific exceptions and handle them gracefully, providing meaningful messages or fallback mechanisms to ensure smooth program execution.
 
 ---
 
-Q. try, catch, finally execution.
+**Q. try, catch, finally execution.
+**
 A. The `try` block contains code that may throw an exception. The `catch` block is used to handle exceptions. The `finally` block always executes, whether an exception is thrown or not, and is typically used for cleanup tasks.
 
 Example:
@@ -335,7 +368,8 @@ try {
 
 ---
 
-Q. Multiple catch blocks.
+**Q. Multiple catch blocks.
+**
 A. You can have multiple `catch` blocks to handle different types of exceptions separately, providing more specific handling for each exception type.
 
 Example:
@@ -352,14 +386,16 @@ try {
 
 ---
 
-Q. Scenario where finally block doesn't execute.
+**Q. Scenario where finally block doesn't execute.
+**
 A. The `finally` block will not execute if the JVM exits the program (e.g., using `System.exit()`) or if the thread executing the `finally` block is interrupted.
 
 ---
 
 ### Design Patterns
 
-Q. Singleton design pattern.
+**Q. Singleton design pattern.
+**
 A. The **Singleton** design pattern ensures that a class has only one instance and provides a global point of access to that instance. It is often used for managing shared resources, like database connections.
 
 Example:
@@ -381,12 +417,14 @@ class Singleton {
 
 ---
 
-Q. How can we create Singleton classes?
+**Q. How can we create Singleton classes?
+**
 A. A singleton class can be created by making the constructor private, ensuring no instances can be created outside the class, and providing a static method to get the single instance.
 
 ---
 
-Q. Factory design pattern.
+**Q. Factory design pattern.
+**
 A. The **Factory** design pattern provides a way to create objects without specifying the exact class of object that will be created. It provides a method to instantiate different types of objects based on the input parameters.
 
 Example:
@@ -422,7 +460,8 @@ class AnimalFactory {
 
 ---
 
-Q. Prototype design pattern.
+**Q. Prototype design pattern.
+**
 A. The **Prototype** design pattern is used to create duplicate objects by cloning an existing object, rather than creating a new one from scratch. This is helpful when object creation is costly or time-consuming.
 
 Example:
@@ -443,7 +482,8 @@ class Prototype {
 
 ---
 
-Q. Can you give an example of a final class and its applications?
+**Q. Can you give an example of a final class and its applications?
+**
 A. A **final** class cannot be subclassed. This is useful when you want to prevent any modifications or subclassing, especially for security or performance reasons.
 
 Example:
@@ -463,7 +503,8 @@ final class MathUtil {
 
 ### Spring Basics
 
-Q. What is Spring Boot, and what are its advantages over traditional Spring applications?  
+**Q. What is Spring Boot, and what are its advantages over traditional Spring applications?  
+**
 A. **Spring Boot** is a framework built on top of the Spring framework that simplifies the setup and configuration of Spring applications. It provides production-ready features such as embedded servers, metrics, and health checks. Its main advantages are:
 - **Automatic configuration**: Spring Boot automatically configures your application based on the dependencies in the classpath, reducing the need for manual configuration.
 - **Embedded server**: Spring Boot includes embedded servers (like Tomcat, Jetty), so you don't need to deploy a WAR file to an external server.
@@ -471,7 +512,8 @@ A. **Spring Boot** is a framework built on top of the Spring framework that simp
 
 ---
 
-Q. Explain dependency injection in Spring.  
+**Q. Explain dependency injection in Spring.  
+**
 A. **Dependency Injection (DI)** in Spring is a design pattern used to implement Inversion of Control (IoC). It allows objects to be injected into a class, rather than the class creating the objects itself. Spring provides DI through constructor injection, setter injection, or field injection.
 
 Example:
@@ -494,7 +536,8 @@ In this example, UserRepository is injected into UserService using constructor i
 
 ---
 
-Q. What is the role of @SpringBootApplication?
+**Q. What is the role of @SpringBootApplication?
+**
 A. `@SpringBootApplication` is a convenience annotation that combines three important annotations:
 
 * `@Configuration`: Indicates that the class has `@Bean` definition methods.
@@ -505,7 +548,8 @@ It’s used to mark the main class of a Spring Boot application to bootstrap and
 
 ---
 
-Q. Spring Bean Scopes.
+**Q. Spring Bean Scopes.
+**
 A. In Spring, beans can have different scopes that define the lifecycle of the bean:
 
 * **Singleton**: Default scope. A single instance of the bean is created and shared across the application context.
@@ -526,7 +570,8 @@ public MyBean myBean() {
 
 ---
 
-Q. @Qualifier and @Primary.
+**Q. @Qualifier and @Primary.
+**
 A. `@Qualifier` and `@Primary` are used to resolve ambiguity when multiple beans of the same type exist.
 
 * **@Primary**: Marks one bean as the default to be injected when multiple beans of the same type exist.
@@ -558,7 +603,8 @@ private UserService userService;
 
 ---
 
-Q. Difference between @Controller and @RestController.
+**Q. Difference between @Controller and @RestController.
+**
 A. Both `@Controller` and `@RestController` are used to define controller classes in Spring MVC, but they serve different purposes:
 
 * **@Controller**: Used for traditional MVC controllers that return a view (HTML, JSP, etc.). You need to explicitly specify the response body with `@ResponseBody`.
@@ -589,12 +635,14 @@ public class UserRestController {
 
 ### Spring Boot Auto-Configuration
 
-Q. Explain the role of @EnableAutoConfiguration annotation in a Spring Boot application.
+**Q. Explain the role of @EnableAutoConfiguration annotation in a Spring Boot application.
+**
 A. `@EnableAutoConfiguration` is a Spring Boot annotation that enables automatic configuration of Spring application components based on the dependencies present in the classpath. It automatically configures beans like data sources, JPA, web components, etc., without the need for manual configuration.
 
 ---
 
-Q. How does Spring Boot achieve auto-configuration internally?
+**Q. How does Spring Boot achieve auto-configuration internally?
+**
 A. Spring Boot achieves auto-configuration by scanning the classpath for relevant libraries and applying default configuration settings for beans based on those libraries. The `@EnableAutoConfiguration` annotation triggers the process, and Spring Boot looks for `@Configuration` classes annotated with `@ConditionalOnClass`, `@ConditionalOnMissingBean`, etc., which determine whether specific auto-configuration should be applied.
 
 Example:
@@ -612,7 +660,8 @@ public class DataSourceAutoConfiguration {
 
 ---
 
-Q. How can you override auto-configuration in Spring Boot?
+**Q. How can you override auto-configuration in Spring Boot?
+**
 A. You can override auto-configuration in Spring Boot by:
 
 * Providing your own custom configuration to replace the default configuration.
@@ -634,7 +683,8 @@ public class MyApplication {
 
 ### Conditional Annotations
 
-Q. What are conditional annotations in Spring?
+**Q. What are conditional annotations in Spring?
+**
 A. Conditional annotations in Spring allow developers to define beans or configurations that should only be applied under specific conditions. These annotations help in enabling or disabling certain features based on the environment or classpath.
 
 Examples of conditional annotations:
@@ -645,7 +695,8 @@ Examples of conditional annotations:
 
 ---
 
-Q. Have you used any conditional annotations before?
+**Q. Have you used any conditional annotations before?
+**
 A. Yes, I have used conditional annotations like `@ConditionalOnProperty` and `@ConditionalOnClass`. They are very useful for making beans configurable based on external properties or the presence of certain libraries.
 
 Example:
@@ -663,14 +714,16 @@ public class FeatureXConfig {
 
 ---
 
-Q. What are the purposes of using these conditional annotations? What do we achieve with them?
+**Q. What are the purposes of using these conditional annotations? What do we achieve with them?
+**
 A. Conditional annotations help to create flexible and configurable Spring Boot applications. They allow you to enable or disable certain configurations or beans based on conditions like the presence of a class, property value, or profile. They make applications more adaptable to different environments or configurations without requiring code changes.
 
 ---
 
 ### Spring Profiles & Configuration
 
-Q. Spring Boot profiles and configuration.
+**Q. Spring Boot profiles and configuration.
+**
 A. **Spring profiles** are a way to segregate parts of your application configuration and make it available only in certain environments. You can define different beans or configurations for different environments (e.g., development, production).
 
 Example:
@@ -703,7 +756,8 @@ spring.profiles.active=dev
 
 ---
 
-Q. Spring Profiles.
+**Q. Spring Profiles.
+**
 A. **Spring Profiles** allow you to define different sets of beans for different environments. For example, you can create a profile for testing, one for production, and one for development. Profiles can be activated either programmatically or through configuration files.
 
 Example:
@@ -718,7 +772,8 @@ spring.datasource.url=jdbc:mysql://localhost:3306/prod_db
 
 ---
 
-Q. Which file do you use: .yml or .properties in your current project?
+**Q. Which file do you use: .yml or .properties in your current project?
+**
 A. In my current project, I use **`application.yml`** for configuration. YAML format provides better readability and a more structured way to define properties. It also allows for easy multi-level configuration.
 
 Example of `application.yml`:
@@ -735,7 +790,8 @@ spring:
 
 ### Dependency Injection
 
-Q. Spring Boot dependency injection.  
+**Q. Spring Boot dependency injection.  
+**
 A. Spring Boot uses the Spring Framework's dependency injection (DI) mechanism to manage object creation and wiring. With annotations like `@Component`, `@Service`, `@Repository`, and `@Controller`, Spring Boot automatically detects and injects beans using component scanning. DI can be done using constructor, setter, or field injection. Constructor injection is the preferred method for immutability and testability.
 
 Example:
@@ -755,12 +811,14 @@ public class MyService {
 
 ### Actuator and Monitoring
 
-Q. Have you worked with or are aware of the actuator endpoints?
+**Q. Have you worked with or are aware of the actuator endpoints?
+**
 A. Yes, I have worked with Spring Boot Actuator. It provides production-ready features and endpoints like `/actuator/health`, `/actuator/info`, `/actuator/metrics`, which help in monitoring and managing Spring Boot applications.
 
 ---
 
-Q. What is the dependency for this actuator?
+**Q. What is the dependency for this actuator?
+**
 A. To use Spring Boot Actuator, you need to add the following dependency in your `pom.xml` (for Maven):
 
 ```xml
@@ -772,7 +830,8 @@ A. To use Spring Boot Actuator, you need to add the following dependency in your
 
 ---
 
-Q. Can we secure these actuator endpoints?
+**Q. Can we secure these actuator endpoints?
+**
 A. Yes, actuator endpoints can be secured using Spring Security. You can configure which endpoints are exposed and who can access them using properties in `application.properties` or `application.yml`.
 
 Example:
@@ -796,19 +855,22 @@ protected void configure(HttpSecurity http) throws Exception {
 
 ---
 
-Q. What is the purpose of the Spring Boot Actuator?
+**Q. What is the purpose of the Spring Boot Actuator?
+**
 A. The Spring Boot Actuator helps monitor and manage Spring Boot applications in production. It provides endpoints for health checks, metrics, environment info, thread dumps, and more. This helps in observing the application's runtime behavior and aids in debugging and performance monitoring.
 
 ---
 
-Q. How would you use the Actuator in microservice architecture for monitoring?
+**Q. How would you use the Actuator in microservice architecture for monitoring?
+**
 A. In a microservices architecture, Spring Boot Actuator can expose health, metrics, and info endpoints for each service. These endpoints can be integrated with tools like **Prometheus**, **Grafana**, or **Spring Cloud Sleuth + Zipkin** to monitor and trace the behavior of each service.
 
 For example, Prometheus can scrape `/actuator/prometheus` endpoint data for metrics aggregation and Grafana can visualize them in dashboards.
 
 ---
 
-Q. Can you tell me about the Actuator and Micrometer?
+**Q. Can you tell me about the Actuator and Micrometer?
+**
 A. Yes. **Micrometer** is the metrics collection library used by Spring Boot Actuator under the hood. It provides a facade over different monitoring systems like Prometheus, New Relic, Datadog, etc. Actuator exposes Micrometer metrics at endpoints like `/actuator/metrics` and `/actuator/prometheus`.
 
 Micrometer lets you define custom metrics using code:
@@ -826,12 +888,14 @@ public void track() {
 
 ### AOP (Aspect-Oriented Programming)
 
-Q. What is Aspect-Oriented Programming (AOP) in Spring?
+**Q. What is Aspect-Oriented Programming (AOP) in Spring?
+**
 A. AOP is a programming paradigm that allows you to define cross-cutting concerns (like logging, security, transactions) separately from the core business logic. In Spring, AOP allows you to intercept method calls and inject behavior before, after, or around them using aspects.
 
 ---
 
-Q. How is AOP implemented in Spring?
+**Q. How is AOP implemented in Spring?
+**
 A. Spring implements AOP using **proxies** (JDK dynamic proxies or CGLIB). It defines **aspects** using `@Aspect`, and you can define pointcuts and advices (e.g., `@Before`, `@After`, `@Around`) to hook into method executions.
 
 Example:
@@ -850,7 +914,8 @@ public class LoggingAspect {
 
 ---
 
-Q. Can you give an advanced use case of AOP?
+**Q. Can you give an advanced use case of AOP?
+**
 A. Yes, one advanced use case is **automatic auditing** in applications. You can use AOP to automatically log method execution times or track user actions (like create/update/delete).
 
 Example: Automatically logging execution time of service methods:
@@ -870,7 +935,8 @@ public Object measureExecutionTime(ProceedingJoinPoint joinPoint) throws Throwab
 
 ### Spring Security
 
-Q. How would you secure REST endpoints in Spring Boot?
+**Q. How would you secure REST endpoints in Spring Boot?
+**
 A. You can secure REST endpoints using **Spring Security** by configuring HTTP security rules and enabling authentication mechanisms like basic auth, JWT, OAuth2, etc.
 
 Example:
@@ -888,7 +954,8 @@ protected void configure(HttpSecurity http) throws Exception {
 
 ---
 
-Q. What are some common security pitfalls in web applications?
+**Q. What are some common security pitfalls in web applications?
+**
 A. Common security pitfalls include:
 
 * Exposing sensitive endpoints without authentication.
@@ -899,7 +966,8 @@ A. Common security pitfalls include:
 
 ---
 
-Q. How does Spring Security handle authentication and authorization?
+**Q. How does Spring Security handle authentication and authorization?
+**
 A. Spring Security handles:
 
 * **Authentication**: Verifies user identity via credentials (username/password, token).
@@ -911,7 +979,8 @@ It provides filters (like `UsernamePasswordAuthenticationFilter`) and supports p
 
 ### Error Handling
 
-Q. How do you handle exceptions in Spring Boot?
+**Q. How do you handle exceptions in Spring Boot?
+**
 A. In Spring Boot, exceptions can be handled globally using `@ControllerAdvice` and `@ExceptionHandler`.
 
 Example:
@@ -933,7 +1002,8 @@ You can also customize error responses using `ErrorController` or by defining `a
 
 ### Versioning & REST API
 
-Q. Versioning in REST API.  
+**Q. Versioning in REST API.  
+**
 A. REST API versioning helps manage changes without breaking existing clients. Common methods include:
 - **URI Versioning**: `/api/v1/products`
 - **Header Versioning**: Custom headers like `X-API-VERSION: 1`
@@ -954,7 +1024,8 @@ public class ProductV1Controller {
 
 ---
 
-Q. PUT vs POST.
+**Q. PUT vs POST.
+**
 A. - **POST** is used to create a **new** resource. It is **non-idempotent** (calling multiple times creates multiple resources).
 
 * **PUT** is used to **update or create** a resource at a specific URI. It is **idempotent** (repeating the request has the same effect).
@@ -966,7 +1037,8 @@ Example:
 
 ---
 
-Q. Difference between PUT and PATCH.
+**Q. Difference between PUT and PATCH.
+**
 A. - **PUT**: Replaces the entire resource.
 
 * **PATCH**: Updates only specific fields (partial update).
@@ -989,7 +1061,8 @@ Example:
 
 ---
 
-Q. How REST API sends data between servers.
+**Q. How REST API sends data between servers.
+**
 A. REST APIs use HTTP as the transport protocol and typically exchange data using:
 
 * **JSON** or **XML** format in the **HTTP body**.
@@ -1002,7 +1075,8 @@ Servers receive requests, deserialize the JSON/XML, process it, and return a str
 
 ### Circular Dependencies
 
-Q. Have you heard about circular dependencies?
+**Q. Have you heard about circular dependencies?
+**
 A. Yes, circular dependencies occur when two or more beans depend on each other, causing Spring to be unable to resolve their creation order.
 
 Example:
@@ -1025,7 +1099,8 @@ This can lead to a `BeanCurrentlyInCreationException`.
 
 ---
 
-Q. How would you address the issue of circular dependencies?
+**Q. How would you address the issue of circular dependencies?
+**
 A. Solutions include:
 
 * **Using constructor injection carefully**: Avoid circular reference using setter or field injection.
@@ -1042,7 +1117,8 @@ class A {
 
 ---
 
-Q. How would you handle circular dependencies in Spring?
+**Q. How would you handle circular dependencies in Spring?
+**
 A. In Spring, the best ways to handle circular dependencies are:
 
 * Refactor code to avoid tight coupling.
@@ -1054,7 +1130,8 @@ A. In Spring, the best ways to handle circular dependencies are:
 
 ### Component Scanning
 
-Q. Can you explain what is component scan?
+**Q. Can you explain what is component scan?
+**
 A. Component scanning is how Spring finds and registers beans automatically by scanning packages for annotations like `@Component`, `@Service`, `@Controller`, and `@Repository`.
 
 It’s enabled by `@ComponentScan` (implicitly included in `@SpringBootApplication`):
@@ -1067,7 +1144,8 @@ public class MyApp { }
 
 ---
 
-Q. How would you prevent a specific package from being scanned?
+**Q. How would you prevent a specific package from being scanned?
+**
 A. You can exclude a package using `@ComponentScan` with `excludeFilters`:
 
 ```java
@@ -1083,7 +1161,8 @@ Or by using profiles or modularization.
 
 ### Starters & Dependencies
 
-Q. Can you name a few common Spring Boot starters and their use cases?
+**Q. Can you name a few common Spring Boot starters and their use cases?
+**
 A. Sure! Here are a few commonly used Spring Boot starters:
 
 * `spring-boot-starter-web`: Web apps with REST controllers.
@@ -1095,7 +1174,8 @@ A. Sure! Here are a few commonly used Spring Boot starters:
 
 ---
 
-Q. Spring Boot Starters / Starter Parent.
+**Q. Spring Boot Starters / Starter Parent.
+**
 A. - **Spring Boot Starters** are pre-configured dependency packages to simplify setup (e.g., `spring-boot-starter-web` includes Tomcat, Jackson, etc.).
 
 * **Starter Parent** is a special parent in `pom.xml` that provides default configurations like dependency versions and plugin setups.
@@ -1115,7 +1195,8 @@ This reduces boilerplate and maintains consistent versions across dependencies.
 
 ## ✅ 3. Java 8 and Advanced Features
 
-Q. Java 8 features.  
+**Q. Java 8 features.  
+**
 A. Java 8 introduced several major features:
 - **Lambda Expressions**: Enables functional-style code.
 - **Streams API**: For processing collections in a functional way.
@@ -1133,7 +1214,8 @@ list.forEach(item -> System.out.println(item));
 
 ---
 
-Q. Can you explain about map() and flatMap()?
+**Q. Can you explain about map() and flatMap()?
+**
 A. - `map()` is used to transform each element in a stream.
 
 * `flatMap()` is used to flatten nested structures (like lists of lists).
@@ -1158,14 +1240,16 @@ List<String> flatList = nestedList.stream()
 
 ### Architecture
 
-Q. Monolithic vs Microservices.
+**Q. Monolithic vs Microservices.
+**
 A. - **Monolithic**: One large codebase, deployed as a single unit. Easier to start, harder to scale and maintain as it grows.
 
 * **Microservices**: Small, independent services that communicate over HTTP or messaging. Scalable, fault-isolated, easier to develop/deploy individually, but more complex to manage.
 
 ---
 
-Q. How would you modify an existing Spring Boot application to convert it into a serverless architecture?
+**Q. How would you modify an existing Spring Boot application to convert it into a serverless architecture?
+**
 A. To convert to serverless:
 
 1. Identify independent modules that can become functions.
@@ -1185,7 +1269,8 @@ public Function<String, String> uppercase() {
 
 ---
 
-Q. What is Spring Cloud and how is it useful for building microservices?
+**Q. What is Spring Cloud and how is it useful for building microservices?
+**
 A. Spring Cloud provides tools for building microservices efficiently. It offers:
 
 * **Service Discovery** (Eureka)
@@ -1199,7 +1284,8 @@ It helps in handling cross-cutting concerns in a microservices ecosystem.
 
 ---
 
-Q. What is the Saga pattern?
+**Q. What is the Saga pattern?
+**
 A. Saga pattern is a microservice transaction management pattern. It breaks a big transaction into smaller local transactions across services, coordinated through:
 
 * **Choreography** (event-based)
@@ -1213,7 +1299,8 @@ Example: Order Service → Payment Service → Inventory Service → Shipping Se
 
 ### Integration & Communication
 
-Q. How do you ensure zero-downtime deployment for a Spring Boot application?
+**Q. How do you ensure zero-downtime deployment for a Spring Boot application?
+**
 A. Strategies for zero-downtime:
 
 * **Blue-Green Deployment**: Run two environments; switch traffic once new version is ready.
@@ -1224,7 +1311,8 @@ A. Strategies for zero-downtime:
 
 ---
 
-Q. What is a Canary deployment?
+**Q. What is a Canary deployment?
+**
 A. Canary deployment is a technique where a new version is deployed to a small set of users first. If successful, it's rolled out to the rest. Helps reduce risk and catch issues early.
 
 Example: Deploy v2 to 5% of traffic → monitor → then 100%.
@@ -1233,7 +1321,8 @@ Example: Deploy v2 to 5% of traffic → monitor → then 100%.
 
 ### Monitoring
 
-Q. How would you use the Actuator in microservice architecture for monitoring?
+**Q. How would you use the Actuator in microservice architecture for monitoring?
+**
 A. Spring Boot Actuator provides production-ready endpoints like `/actuator/health`, `/actuator/metrics`, `/actuator/info`, etc. In microservices:
 
 * Expose metrics at `/actuator/prometheus`
@@ -1247,7 +1336,8 @@ Example: Monitor service health and request latency via Prometheus scraping Actu
 
 ### Non-relational Databases
 
-Q. Can you tell me how do you integrate a non-relational database?
+**Q. Can you tell me how do you integrate a non-relational database?
+**
 A. Yes. To integrate a NoSQL DB like MongoDB:
 
 1. Add dependency:
@@ -1289,7 +1379,8 @@ spring.data.mongodb.uri=mongodb://localhost:27017/mydb
 
 ### SQL and NoSQL
 
-Q. What is the difference between SQL and NoSQL databases?  
+**Q. What is the difference between SQL and NoSQL databases?  
+**
 A. - **SQL** (Relational) databases use structured schemas with tables, rows, and columns. Example: MySQL, PostgreSQL.
 - **NoSQL** databases are schema-less or flexible schema and store data in formats like documents, key-value, or graph. Example: MongoDB, Cassandra.
 
@@ -1304,7 +1395,8 @@ A. - **SQL** (Relational) databases use structured schemas with tables, rows, an
 
 ### Schema Design
 
-Q. You mentioned delivery partner — can you design the schema for delivery partner?  
+**Q. You mentioned delivery partner — can you design the schema for delivery partner?  
+**
 A. Yes. Here's a basic schema for a **Delivery Partner**:
 
 ```sql
@@ -1321,7 +1413,8 @@ CREATE TABLE delivery_partner (
 
 ---
 
-Q. Can you now design the schema for food delivery partner?
+**Q. Can you now design the schema for food delivery partner?
+**
 A. A **Food Delivery Partner** schema could include relationships with orders and location tracking:
 
 ```sql
@@ -1343,7 +1436,8 @@ This allows us to track which partner is delivering which order, and their curre
 
 ### Joins and Queries
 
-Q. What are joins in SQL? Name their types.
+**Q. What are joins in SQL? Name their types.
+**
 A. Joins are used to combine rows from two or more tables based on a related column.
 
 Types of joins:
@@ -1356,7 +1450,8 @@ Types of joins:
 
 ---
 
-Q. Queries for highest/second highest salary.
+**Q. Queries for highest/second highest salary.
+**
 A.
 
 **Highest salary**:
@@ -1386,7 +1481,8 @@ LIMIT 1 OFFSET 1;
 
 ### Database Operations
 
-Q. What is data normalization?
+**Q. What is data normalization?
+**
 A. Data normalization is the process of organizing data to reduce redundancy and improve integrity. It involves dividing large tables into smaller related tables.
 
 Forms:
@@ -1400,7 +1496,8 @@ Instead of storing customer address repeatedly, we keep it in a separate table a
 
 ---
 
-Q. What is the difference between DELETE, TRUNCATE, and DROP?
+**Q. What is the difference between DELETE, TRUNCATE, and DROP?
+**
 A.
 
 | Command  | Deletes Data | Can be Rolled Back | Removes Structure |
@@ -1415,7 +1512,8 @@ A.
 
 ---
 
-Q. How would you integrate a relational database (e.g., MySQL) with a Spring Boot application?
+**Q. How would you integrate a relational database (e.g., MySQL) with a Spring Boot application?
+**
 A.
 
 Steps:
@@ -1458,7 +1556,8 @@ public interface UserRepository extends JpaRepository<User, Long> {}
 
 ---
 
-Q. Database schema migration without downtime.
+**Q. Database schema migration without downtime.
+**
 A.
 
 To achieve zero-downtime migration:
@@ -1484,7 +1583,8 @@ Best Practice:
 
 ## ✅ 6. DevOps, Server & Tools
 
-Q. Have you used CI/CD pipelines? If so, explain the process.  
+**Q. Have you used CI/CD pipelines? If so, explain the process.  
+**
 A. Yes, I have worked with CI/CD pipelines using **GitHub Actions** and **Jenkins**. CI/CD automates testing, building, and deploying code.
 
 Typical CI/CD flow:
@@ -1519,7 +1619,8 @@ jobs:
 
 ---
 
-Q. Can we create a server in a Java application without using the Spring Framework?
+**Q. Can we create a server in a Java application without using the Spring Framework?
+**
 A. Yes, we can create a basic HTTP server in Java using the built-in `com.sun.net.httpserver.HttpServer`.
 
 Example:
@@ -1556,7 +1657,8 @@ This creates a lightweight HTTP server without any framework.
 
 ### 🆕 Extra Helpful Questions
 
-Q. How do you containerize a Spring Boot application using Docker?
+**Q. How do you containerize a Spring Boot application using Docker?
+**
 A.
 
 1. Create a `Dockerfile`:
@@ -1576,7 +1678,8 @@ docker run -p 8080:8080 myapp
 
 ---
 
-Q. What is the use of SonarQube in a CI pipeline?
+**Q. What is the use of SonarQube in a CI pipeline?
+**
 A. **SonarQube** is used for **code quality analysis**. It checks for:
 
 * Code smells
@@ -1588,7 +1691,8 @@ You can integrate it in CI to break builds on quality gate failure.
 
 ---
 
-Q. What is your experience with Git branching strategies?
+**Q. What is your experience with Git branching strategies?
+**
 A. I’ve worked with:
 
 * **Feature branching**: Each feature in a separate branch.
@@ -1605,7 +1709,8 @@ git push origin feature/login
 
 ---
 
-Q. How do you monitor applications running on the server?
+**Q. How do you monitor applications running on the server?
+**
 A. I use:
 
 * **Spring Boot Actuator** for app health
@@ -1618,7 +1723,8 @@ A. I use:
 
 ## ✅ 7. Software Engineering & Testing
 
-Q. What testing strategies would you recommend for Spring Boot applications?  
+**Q. What testing strategies would you recommend for Spring Boot applications?  
+**|
 A. I recommend a **layered testing approach**:
 
 1. **Unit Testing**: Using JUnit + Mockito for service, controller logic.
@@ -1645,7 +1751,8 @@ public class UserServiceTest {
 
 ---
 
-Q. How do you ensure the quality and maintainability of your code?
+**Q. How do you ensure the quality and maintainability of your code?
+**
 A. I ensure quality through:
 
 * Writing unit & integration tests.
@@ -1657,7 +1764,8 @@ A. I ensure quality through:
 
 ---
 
-Q. Can you describe a challenging situation you faced in a project?
+**Q. Can you describe a challenging situation you faced in a project?
+**
 A. Once, we had a production issue where an API randomly failed due to **thread starvation** caused by blocking DB calls. I used profiling tools and discovered connection pool exhaustion. I fixed it by:
 
 * Optimizing DB queries.
@@ -1668,7 +1776,8 @@ This improved response time and reduced errors.
 
 ---
 
-Q. How does the Agile methodology impact your project workflow?
+**Q. How does the Agile methodology impact your project workflow?
+**
 A. Agile makes development **iterative and adaptive**. Here's how it helped:
 
 * We deliver features in **sprints (2 weeks)**.
@@ -1687,7 +1796,8 @@ Got it! Here’s the improved **SDLC** section, as per your request, in the exac
 ## ✅ 8. Software Development Life Cycle (SDLC)
 
 
-Q. What is SDLC and what models have you worked with?
+**Q. What is SDLC and what models have you worked with?
+**
 A. **SDLC** is the process of planning, developing, testing, deploying, and maintaining software. I’ve worked mostly in:
 
 * **Agile**: Iterative, fast feedback cycles.
@@ -1712,7 +1822,8 @@ Phases:
 
 ---
 
-Q. How do you manage changes in requirements during a project in Agile?
+**Q. How do you manage changes in requirements during a project in Agile?
+**
 A. In **Agile**, changes are a part of the process. We handle changes in the following ways:
 
 * **Product Backlog**: New requirements or changes are added as **backlog items**.
@@ -1725,7 +1836,8 @@ A. In **Agile**, changes are a part of the process. We handle changes in the fol
 
 ---
 
-Q. How do you ensure that SDLC phases are properly followed in your project?
+**Q. How do you ensure that SDLC phases are properly followed in your project?
+**
 A. I ensure that the SDLC phases are followed by:
 
 * **Creating a clear project plan**: Defining objectives, deliverables, and timelines for each phase.
@@ -1738,7 +1850,8 @@ A. I ensure that the SDLC phases are followed by:
 
 ---
 
-Q. Can you explain how SDLC is different in a traditional waterfall model vs Agile?
+**Q. Can you explain how SDLC is different in a traditional waterfall model vs Agile?
+**
 A. In **Waterfall**:
 
 * Phases are completed in a strict linear sequence. For example, design is done only after the requirements are fully gathered.
@@ -1752,7 +1865,8 @@ In **Agile**:
 
 ---
 
-Q. How do you handle deadlines in Agile development?
+**Q. How do you handle deadlines in Agile development?
+**
 A. In **Agile**, we manage deadlines through:
 
 * **Sprint Planning**: Breaking work into smaller tasks and assigning deadlines within each sprint.
@@ -1761,7 +1875,8 @@ A. In **Agile**, we manage deadlines through:
 
 ---
 
-Q. What is the importance of documentation in SDLC, especially in Agile?
+**Q. What is the importance of documentation in SDLC, especially in Agile?
+**
 A. Documentation in **Agile** should be minimal yet effective:
 
 * **User Stories**: Documenting features as user stories allows for clear understanding and prioritization.
@@ -1775,7 +1890,8 @@ While **Agile** emphasizes working software over extensive documentation, essent
 
 ## ✅ 9. System Design
 
-Q. How would you design a URL shortener like Bitly?
+**Q. How would you design a URL shortener like Bitly?
+**
 A. **Basic Components**:
 
 * UI/Frontend
@@ -1802,7 +1918,8 @@ A. **Basic Components**:
 
 ---
 
-Q. How would you design a scalable notification system?
+**Q. How would you design a scalable notification system?
+**
 A. **Basic Components**:
 
 * Message Queue (Kafka or RabbitMQ)
@@ -1835,7 +1952,8 @@ In a large e-commerce application, an order confirmation email might need to be 
 
 ---
 
-Q. How would you design a distributed file storage system?
+**Q. How would you design a distributed file storage system?
+**
 A. **Basic Components**:
 
 * File Upload/Download Service
@@ -1866,7 +1984,8 @@ Cloud storage services like **Google Drive** or **Dropbox** allow users to store
 
 ---
 
-Q. How would you design a real-time chat application like WhatsApp?
+**Q. How would you design a real-time chat application like WhatsApp?
+**
 A. **Basic Components**:
 
 * Chat Service (API for messaging)
@@ -1900,7 +2019,8 @@ A. **Basic Components**:
 
 ---
 
-Q. How would you design a recommendation system like Netflix?
+**Q. How would you design a recommendation system like Netflix?
+**
 A. **Basic Components**:
 
 * User Profile Data (view history, preferences, etc.)
@@ -1933,7 +2053,8 @@ Netflix uses machine learning algorithms for content recommendation based on use
 
 ---
 
-Q. How would you design a payment gateway like PayPal?
+**Q. How would you design a payment gateway like PayPal?
+**
 A. **Basic Components**:
 
 * User Authentication Service
@@ -1969,7 +2090,8 @@ When you make a payment via **PayPal**, the system securely processes the transa
 
 ## ✅ 10. AWS (Amazon Web Services)
 
-Q. What AWS services have you used in your project?
+**Q. What AWS services have you used in your project?
+**
 A. I've worked with:
 
 * **EC2**: For hosting Spring Boot apps.
@@ -1982,7 +2104,8 @@ A. I've worked with:
 
 ---
 
-Q. How do you deploy a Spring Boot app on AWS EC2?
+**Q. How do you deploy a Spring Boot app on AWS EC2?
+**
 A.
 
 1. Package app as `.jar`.
@@ -2003,7 +2126,8 @@ Optional: Use Nginx to reverse proxy and route traffic.
 
 ---
 
-Q. What is the difference between S3 and RDS?
+**Q. What is the difference between S3 and RDS?
+**
 A.
 
 | Feature  | S3                                | RDS                               |
@@ -2015,7 +2139,7 @@ A.
 
 ---
 
-Q. What is IAM and why is it important?
+**Q. What is IAM and why is it important?**
 A. IAM (Identity and Access Management) is used to:
 
 * Manage **users**, **roles**, and **permissions**.
@@ -2027,6 +2151,7 @@ Example: Allow only `s3:GetObject` permission to a user for specific bucket acce
 ---
 
 Q. **Can you explain how you would design a highly available and scalable application on AWS?**
+
 A. **Basic Components**:
 
 * EC2 instances for compute resources
@@ -2065,6 +2190,7 @@ For an e-commerce application, during a sale event, there’s an unexpected surg
 ---
 
 Q. **What are some ways you can improve the performance of an AWS-based application?**
+
 A. **Basic Components**:
 
 * EC2 instances with optimized configurations
@@ -2097,6 +2223,7 @@ An online streaming platform could use **ElastiCache** to store frequently reque
 ---
 
 Q. **How would you set up monitoring and logging for a production application on AWS?**
+
 A. **Basic Components**:
 
 * CloudWatch for metrics and alarms
@@ -2128,6 +2255,7 @@ For a financial application, CloudWatch can monitor transaction rates and trigge
 ---
 
 Q. **Explain how you would handle security and access control in AWS, including the use of IAM roles and policies.**
+
 A. **Basic Components**:
 
 * IAM for managing users, roles, and permissions
@@ -2158,6 +2286,7 @@ In a multi-team development environment, each team should have its own IAM role 
 ---
 
 Q. **What AWS services have you used for continuous integration and deployment?**
+
 A. **Basic Components**:
 
 * CodeCommit for version control
@@ -2190,6 +2319,7 @@ When deploying a Spring Boot application to EC2, **CodePipeline** automates the 
 ---
 
 Q. **What do you know about AWS Lambda? How do you handle concurrency in AWS Lambda?**
+
 A. **Basic Components**:
 
 * Lambda for serverless compute
